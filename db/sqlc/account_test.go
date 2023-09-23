@@ -107,5 +107,3 @@ func TestListAccounts(t *testing.T) {
 		require.NotEmpty(t, account)
 	}
 }
-
-// TODO: write tests for entry and transfer
