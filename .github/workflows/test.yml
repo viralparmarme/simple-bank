@@ -1,4 +1,4 @@
-name: ci-test
+name: Run unit tests
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test the project
+    name: Run unit tests
     runs-on: ubuntu-latest
 
     services:
