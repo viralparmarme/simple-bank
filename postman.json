@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "cfe0faaa-6516-411c-acc3-5f519824ca78",
+		"name": "Simple Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19279853"
+	},
+	"item": [
+		{
+			"name": "Create Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "v2.local.hYTNkUy5jrzoQtmfVLTgv5-b2D5ClO3RaBGNgDQ2xXgbDLpZe7FKd3sedycQVbfnKbKnpGeiEH71ZphlCuR3LZkfPgmqt5O6nqNtq1TyW7_km9-EjLtsYwrYtLhZG0grFpOzUL50-IMWT9mXjBscbwuuah2aHV7B526v3sELXZldunbpCaK4Tg0rLiIooaJRbUesywXWHs-DqcZyXJrkWNEPYJZh8T5bgdunvGE-M3ayi6G86DkpOVrY2gw3pk87LYAtLurikh1JcQ.bnVsbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner\":\"viralparmar5\",\n    \"currency\":\"INR\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8080/accounts",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "v2.local.bWjCxG3kLMHNPp4KTeoNYlP7IKU35FxBbmJ3jNagtCIsLAg0vgUebn7peyGsuJtDcEOF9v3g_Y-l9G2wRH8WTHWgudhvY0jMYDm76TEfBKHhgpImyJBoVccFrroeQukMOGv2ONWb7bVNCnX12ijOYnoveMytIL4yV9QxwsRH8NVI2EMAbmM-0-hicFFcI_wOcyaGcLflKrJVBH6tDGEn4jipzVnhIC2KK4R64CFiOhuUoOTvUyS1AUwXBJfknYlWS2EZBSOnWnLLMelQQak.bnVsbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8080/accounts/271",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"271"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Accounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "v2.local.hYTNkUy5jrzoQtmfVLTgv5-b2D5ClO3RaBGNgDQ2xXgbDLpZe7FKd3sedycQVbfnKbKnpGeiEH71ZphlCuR3LZkfPgmqt5O6nqNtq1TyW7_km9-EjLtsYwrYtLhZG0grFpOzUL50-IMWT9mXjBscbwuuah2aHV7B526v3sELXZldunbpCaK4Tg0rLiIooaJRbUesywXWHs-DqcZyXJrkWNEPYJZh8T5bgdunvGE-M3ayi6G86DkpOVrY2gw3pk87LYAtLurikh1JcQ.bnVsbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8080/accounts?page_id=1&page_size=10",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "page_id",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Money",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "v2.local.bWjCxG3kLMHNPp4KTeoNYlP7IKU35FxBbmJ3jNagtCIsLAg0vgUebn7peyGsuJtDcEOF9v3g_Y-l9G2wRH8WTHWgudhvY0jMYDm76TEfBKHhgpImyJBoVccFrroeQukMOGv2ONWb7bVNCnX12ijOYnoveMytIL4yV9QxwsRH8NVI2EMAbmM-0-hicFFcI_wOcyaGcLflKrJVBH6tDGEn4jipzVnhIC2KK4R64CFiOhuUoOTvUyS1AUwXBJfknYlWS2EZBSOnWnLLMelQQak.bnVsbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from_account_id\":271,\n    \"to_account_id\":265,\n    \"amount\":10,\n    \"currency\":\"USD\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8080/transfers",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"viralparmar5\",\n    \"full_name\":\"Viral Parmar\",\n    \"email\":\"viralparmar5@gmail.com\",\n    \"password\":\"secret\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8080/users",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"viralparmar5\",\n    \"password\":\"secret\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8080/users/login",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
